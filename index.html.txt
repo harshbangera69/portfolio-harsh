@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Harsh Bangera - Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to My Portfolio</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#goals">Future Goals</a>
+      <a href="#personal">Personal</a>
+    </nav>
+  </header>
+
+  <section id="welcome">
+    <h2>Hello, I'm Harsh Bangera</h2>
+    <img src="your-photo.jpg" alt="Harsh's Photo" width="200" />
+    <video width="320" height="240" controls>
+      <source src="intro.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p><strong>Name:</strong> Harsh Bangera</p>
+    <p><strong>Location:</strong> Virar, India</p>
+    <p><strong>Education:</strong> Currently pursuing a Bachelor of Engineering in Computer Engineering</p>
+    <p><strong>Languages Known:</strong> Hindi, Marathi, English</p>
+  </section>
+
+  <section id="achievements">
+    <h2>Achievements</h2>
+    <ul>
+      <li>Built multiple personal and academic websites</li>
+      <li>Completed an industry certification course in SQL</li>
+      <li>Completed an industry certification course in .NET</li>
+    </ul>
+  </section>
+
+  <section id="goals">
+    <h2>Future Goals</h2>
+    <p>My next academic goal is to pursue my Master’s degree in the United States. I aim to deepen my technical knowledge and contribute to the tech world meaningfully.</p>
+    <p>I would like to build websites that serve a purpose and create a real impact — websites that solve social problems or contribute to a cause.</p>
+  </section>
+
+  <section id="personal">
+    <h2>Personal Side</h2>
+    <p><strong>Hobbies:</strong> I enjoy gaming and watching cinema. Gaming helps me unwind and sharpens my reflexes, while cinema inspires my creativity and storytelling sense.</p>
+    <p><strong>Role Models:</strong> Cristiano Ronaldo — his relentless work ethic, confidence, and commitment to excellence inspire me to push myself further every day.</p>
+    <p><strong>Favorite Books, Websites, Startups:</strong> None currently.</p>
+    <p><strong>Volunteering Experience:</strong> None so far, but I’m open to contributing in the future.</p>
+  </section>
+
+  <footer>
+    <p>Made with ❤️ by Harsh Bangera</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

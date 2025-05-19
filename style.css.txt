@@ -1,0 +1,46 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header {
+  background: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+section {
+  padding: 20px;
+}
+
+img, video {
+  display: block;
+  margin: 10px auto;
+  border-radius: 8px;
+}
+
+footer {
+  background: #f4f4f4;
+  text-align: center;
+  padding: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  img, video {
+    width: 100%;
+  }
+}
+
