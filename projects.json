@@ -1,0 +1,15 @@
+[
+  {
+    "title": "Personal Portfolio Website",
+    "description": "A responsive and stylish personal portfolio built using HTML, Tailwind CSS, and JavaScript. It features sections for About, Projects, and Contact with dynamic content and media.",
+    "image": "MYPHOTO.png",
+    "link": "https://harshbangera69.github.io/my-portfolio"
+  },
+  {
+    "title": "Intro Video Project",
+    "description": "This project includes a custom-made intro video that explains who I am, my skills, and goals as a developer. It is embedded directly into the About section.",
+    "video": "intro.mp4",
+    "link": "https://your-github-username.github.io/your-repo-name"
+  }
+]
+
