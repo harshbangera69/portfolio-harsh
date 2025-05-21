@@ -6,60 +6,71 @@
   <title>Harsh Bangera | Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gradient-to-br from-blue-50 to-purple-100 text-gray-900 overflow-y-scroll">
+<body class="bg-gradient-to-br from-blue-50 via-white to-blue-100 text-gray-900">
 
   <!-- Header -->
   <header class="bg-white shadow-md sticky top-0 z-50">
     <div class="container mx-auto flex justify-between items-center p-4">
-      <h1 class="text-2xl font-bold text-indigo-600">Harsh Bangera</h1>
+      <h1 class="text-2xl font-bold text-blue-600">Harsh Bangera</h1>
       <nav>
-        <ul class="flex space-x-6 text-gray-600 font-medium">
-          <li><a href="#about" class="hover:text-indigo-600 transition">About</a></li>
-          <li><a href="#projects" class="hover:text-indigo-600 transition">Projects</a></li>
-          <li><a href="#contact" class="hover:text-indigo-600 transition">Contact</a></li>
+        <ul class="flex space-x-6 text-gray-700 font-medium">
+          <li><a href="#about" class="hover:text-blue-600">About</a></li>
+          <li><a href="#projects" class="hover:text-blue-600">Projects</a></li>
+          <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <!-- About Section -->
-  <section id="about" class="container mx-auto p-6 mt-10 bg-white rounded-xl shadow-lg max-w-5xl">
-    <h2 class="text-3xl font-bold text-indigo-700 mb-4">About Me</h2>
-    <div class="flex flex-col md:flex-row gap-6 items-center">
-      <img src="MYPHOTO.png" alt="Harsh Bangera" class="rounded-lg shadow-md max-w-xs" />
-      <div>
-        <p class="text-gray-700 leading-relaxed mb-2">
-          Hi! I'm Harsh Bangera, a passionate web developer skilled in building modern, responsive websites using Tailwind CSS and JavaScript.
-        </p>
-        <p class="text-gray-600 font-semibold">📍 Based in Mumbai, India</p>
-        <video controls class="rounded-lg shadow-md mt-4 w-full max-w-md">
-          <source src="intro.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
-    </div>
+  <section id="about" class="container mx-auto p-6 mt-10 bg-white rounded shadow-md max-w-3xl">
+    <h2 class="text-3xl font-semibold mb-4 text-blue-700">About Me</h2>
+    <p class="text-gray-700 leading-relaxed mb-6">
+      Hi! I'm Harsh Bangera, a passionate web developer building modern, responsive websites using HTML, Tailwind CSS, JavaScript, and APIs.
+    </p>
+    <img src="MYPHOTO.png" alt="My Photo" class="rounded shadow-md w-48 mb-4" />
+    <video controls class="w-full rounded shadow-md">
+      <source src="intro.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
   </section>
 
   <!-- Projects Section -->
-  <section id="projects" class="container mx-auto p-6 mt-10 max-w-6xl">
-    <h2 class="text-3xl font-bold text-indigo-700 mb-6">Projects</h2>
+  <section id="projects" class="container mx-auto p-6 mt-10 max-w-5xl">
+    <h2 class="text-3xl font-semibold mb-6 text-blue-700">Projects</h2>
     <div id="projects-container" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      <!-- Projects will be loaded here -->
+      <!-- Projects loaded via JSON -->
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="container mx-auto p-6 mt-10 bg-white rounded-xl shadow-lg max-w-3xl mb-20">
-    <h2 class="text-3xl font-bold text-indigo-700 mb-4">Contact Me</h2>
-    <p class="text-gray-600 mb-4 font-medium">📍 Location: Mumbai, India</p>
+  <section id="contact" class="container mx-auto p-6 mt-10 bg-white rounded shadow-md max-w-3xl mb-20">
+    <h2 class="text-3xl font-semibold mb-4 text-blue-700">Contact Me</h2>
     <form class="flex flex-col space-y-4 max-w-md">
-      <input type="text" placeholder="Your Name" class="border border-gray-300 rounded px-3 py-2 focus:ring-2 focus:ring-indigo-400" />
-      <input type="email" placeholder="Your Email" class="border border-gray-300 rounded px-3 py-2 focus:ring-2 focus:ring-indigo-400" />
-      <textarea placeholder="Your Message" rows="4" class="border border-gray-300 rounded px-3 py-2 focus:ring-2 focus:ring-indigo-400"></textarea>
-      <button type="submit" class="bg-indigo-600 text-white py-2 rounded hover:bg-indigo-700 transition">
+      <input type="text" placeholder="Your Name" class="border border-gray-300 rounded px-3 py-2" />
+      <input type="email" placeholder="Your Email" class="border border-gray-300 rounded px-3 py-2" />
+      <textarea placeholder="Your Message" rows="4" class="border border-gray-300 rounded px-3 py-2"></textarea>
+      <button type="submit" class="bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition">
         Send
       </button>
     </form>
+
+    <!-- Embedded Google Map -->
+    <div class="mt-10">
+      <h3 class="text-xl font-semibold mb-2 text-blue-700">My Location</h3>
+      <div class="w-full h-64">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30094.70166532737!2d72.78435317800181!3d19.462562786667654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7aa23dce7efbf%3A0x99bd87871748d8f4!2sVirar%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1747819369143!5m2!1sen!2sin" 
+          width="100%" 
+          height="100%" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade"
+          class="rounded shadow"
+        ></iframe>
+      </div>
+    </div>
   </section>
 
   <!-- Footer -->
@@ -67,7 +78,7 @@
     &copy; 2025 Harsh Bangera. All rights reserved.
   </footer>
 
-  <!-- JS for loading projects -->
+  <!-- Project Loading Script -->
   <script>
     fetch('projects.json')
       .then(response => response.json())
@@ -75,29 +86,15 @@
         const container = document.getElementById('projects-container');
         projects.forEach(project => {
           const projectEl = document.createElement('div');
-          projectEl.className = 'bg-white rounded-xl shadow-md p-4 flex flex-col';
-
-          let mediaHTML = '';
-          if (project.image) {
-            mediaHTML += `<img src="${project.image}" alt="${project.title}" class="mb-3 rounded-lg max-h-48 object-cover" />`;
-          }
-          if (project.video) {
-            mediaHTML += `
-              <video controls class="mb-3 rounded-lg max-h-48">
-                <source src="${project.video}" type="video/mp4" />
-              </video>
-            `;
-          }
+          projectEl.className = 'bg-white rounded shadow p-4 flex flex-col justify-between';
 
           projectEl.innerHTML = `
-            ${mediaHTML}
-            <h3 class="text-xl font-semibold mb-2 text-indigo-700">${project.title}</h3>
-            <p class="text-gray-700 mb-2">${project.description}</p>
-            <a href="${project.link}" target="_blank" class="mt-auto text-indigo-600 hover:underline font-medium">
+            <h3 class="text-xl font-semibold mb-2 text-blue-600">${project.title}</h3>
+            <p class="text-gray-700 flex-grow">${project.description}</p>
+            <a href="${project.link}" target="_blank" class="mt-4 inline-block text-blue-600 hover:underline">
               View Project
             </a>
           `;
-
           container.appendChild(projectEl);
         });
       })
