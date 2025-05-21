@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Harsh Bangera | Portfolio</title>
+  <title>Your Name | Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100 text-gray-900">
@@ -57,7 +57,6 @@
   </footer>
 
   <script>
-    // Fetch projects from local JSON file and display them
     fetch('projects.json')
       .then(response => response.json())
       .then(projects => {
@@ -66,7 +65,21 @@
           const projectEl = document.createElement('div');
           projectEl.className = 'bg-white rounded shadow p-4 flex flex-col justify-between';
 
+          let mediaHTML = '';
+          if (project.image) {
+            mediaHTML += `<img src="${project.image}" alt="${project.title} screenshot" class="mb-3 rounded max-h-48 object-cover" />`;
+          }
+          if (project.video) {
+            mediaHTML += `
+              <video controls class="mb-3 rounded max-h-48">
+                <source src="${project.video}" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            `;
+          }
+
           projectEl.innerHTML = `
+            ${mediaHTML}
             <h3 class="text-xl font-semibold mb-2">${project.title}</h3>
             <p class="text-gray-700 flex-grow">${project.description}</p>
             <a href="${project.link}" target="_blank" class="mt-4 inline-block text-blue-600 hover:underline">
@@ -74,4 +87,13 @@
             </a>
           `;
 
-          container
+          container.appendChild(projectEl);
+        });
+      })
+      .catch(err => {
+        console.error('Failed to load projects:', err);
+      });
+  </script>
+
+</body>
+</html>
