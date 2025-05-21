@@ -6,69 +6,70 @@
   <title>Harsh Bangera | Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 text-gray-900">
+<body class="bg-gray-100 text-gray-900 flex">
 
-  <!-- Header -->
-  <header class="bg-white shadow-md sticky top-0 z-50">
-    <div class="container mx-auto flex justify-between items-center p-4">
-      <h1 class="text-2xl font-bold">Harsh Bangera</h1>
-      <nav>
-        <ul class="flex space-x-6 text-gray-600">
-          <li><a href="#about" class="hover:text-blue-600">About</a></li>
-          <li><a href="#skills" class="hover:text-blue-600">Skills</a></li>
-          <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <!-- About Section -->
-  <section id="about" class="container mx-auto p-6 mt-10 bg-white rounded shadow-md max-w-3xl">
-    <h2 class="text-3xl font-semibold mb-4">About Me</h2>
-    <div class="flex flex-col md:flex-row items-center gap-6">
-      <img src="MYPHOTO.png" alt="Harsh Bangera" class="rounded shadow-md max-w-xs" />
-      <div>
-        <p class="text-gray-700 leading-relaxed">
-          Hi! I'm Harsh Bangera, a passionate web developer skilled in modern, responsive website design using Tailwind CSS and JavaScript.
-        </p>
-        <video controls class="mt-4 rounded shadow-md max-w-full" style="max-height: 300px;">
-          <source src="intro.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills" class="container mx-auto p-6 mt-10 bg-white rounded shadow-md max-w-3xl">
-    <h2 class="text-3xl font-semibold mb-4">Skills</h2>
-    <ul class="grid grid-cols-2 sm:grid-cols-3 gap-4 text-gray-700">
-      <li class="bg-gray-100 p-3 rounded text-center shadow-sm hover:bg-blue-50 transition">HTML</li>
-      <li class="bg-gray-100 p-3 rounded text-center shadow-sm hover:bg-blue-50 transition">CSS</li>
-      <li class="bg-gray-100 p-3 rounded text-center shadow-sm hover:bg-blue-50 transition">JavaScript</li>
-      <li class="bg-gray-100 p-3 rounded text-center shadow-sm hover:bg-blue-50 transition">Tailwind CSS</li>
-      <li class="bg-gray-100 p-3 rounded text-center shadow-sm hover:bg-blue-50 transition">React (Learning)</li>
-      <li class="bg-gray-100 p-3 rounded text-center shadow-sm hover:bg-blue-50 transition">Git</li>
+  <!-- Sidebar -->
+  <nav class="bg-white shadow-md h-screen w-48 fixed top-0 left-0 p-6 overflow-y-auto">
+    <h1 class="text-xl font-bold mb-6">Harsh Bangera</h1>
+    <ul class="space-y-4 text-gray-700">
+      <li><a href="#about" class="hover:text-blue-600">About</a></li>
+      <li><a href="#skills" class="hover:text-blue-600">Skills</a></li>
+      <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
     </ul>
-  </section>
+  </nav>
 
-  <!-- Contact Section -->
-  <section id="contact" class="container mx-auto p-6 mt-10 mb-20 bg-white rounded shadow-md max-w-3xl">
-    <h2 class="text-3xl font-semibold mb-4">Contact Me</h2>
-    <form class="flex flex-col space-y-4 max-w-md">
-      <input type="text" placeholder="Your Name" class="border border-gray-300 rounded px-3 py-2" />
-      <input type="email" placeholder="Your Email" class="border border-gray-300 rounded px-3 py-2" />
-      <textarea placeholder="Your Message" rows="4" class="border border-gray-300 rounded px-3 py-2"></textarea>
-      <button type="submit" class="bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition">
-        Send
-      </button>
-    </form>
-  </section>
+  <!-- Main content -->
+  <main class="flex-grow ml-48 p-6 max-w-4xl">
 
-  <!-- Footer -->
-  <footer class="bg-white text-center p-4 text-gray-500">
-    &copy; 2025 Harsh Bangera. All rights reserved.
-  </footer>
+    <!-- About Section -->
+    <section id="about" class="bg-white rounded shadow-md p-6 mt-10">
+      <h2 class="text-3xl font-semibold mb-4">About Me</h2>
+      <div class="flex flex-col md:flex-row items-center gap-6">
+        <img src="MYPHOTO.png" alt="Harsh Bangera" class="rounded shadow-md max-w-xs" />
+        <div>
+          <p class="text-gray-700 leading-relaxed">
+            Hi! I'm Harsh Bangera, a passionate web developer skilled in modern, responsive website design using Tailwind CSS and JavaScript.
+          </p>
+          <video controls class="mt-4 rounded shadow-md max-w-full" style="max-height: 300px;">
+            <source src="intro.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="bg-white rounded shadow-md p-6 mt-10">
+      <h2 class="text-3xl font-semibold mb-4">Skills</h2>
+      <ul class="grid grid-cols-2 sm:grid-cols-3 gap-4 text-gray-700">
+        <li class="bg-gray-100 p-3 rounded text-center shadow-sm hover:bg-blue-50 transition">HTML</li>
+        <li class="bg-gray-100 p-3 rounded text-center shadow-sm hover:bg-blue-50 transition">CSS</li>
+        <li class="bg-gray-100 p-3 rounded text-center shadow-sm hover:bg-blue-50 transition">JavaScript</li>
+        <li class="bg-gray-100 p-3 rounded text-center shadow-sm hover:bg-blue-50 transition">Tailwind CSS</li>
+        <li class="bg-gray-100 p-3 rounded text-center shadow-sm hover:bg-blue-50 transition">React (Learning)</li>
+        <li class="bg-gray-100 p-3 rounded text-center shadow-sm hover:bg-blue-50 transition">Git</li>
+      </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-white rounded shadow-md p-6 mt-10 mb-20">
+      <h2 class="text-3xl font-semibold mb-4">Contact Me</h2>
+      <form class="flex flex-col space-y-4 max-w-md">
+        <input type="text" placeholder="Your Name" class="border border-gray-300 rounded px-3 py-2" />
+        <input type="email" placeholder="Your Email" class="border border-gray-300 rounded px-3 py-2" />
+        <textarea placeholder="Your Message" rows="4" class="border border-gray-300 rounded px-3 py-2"></textarea>
+        <button type="submit" class="bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition">
+          Send
+        </button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white text-center p-4 text-gray-500">
+      &copy; 2025 Harsh Bangera. All rights reserved.
+    </footer>
+
+  </main>
 
 </body>
 </html>
