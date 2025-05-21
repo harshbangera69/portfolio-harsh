@@ -2,79 +2,76 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Harsh Bangera - Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-  <header>
-    <h1>Welcome to My Portfolio</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#achievements">Achievements</a>
-      <a href="#goals">Future Goals</a>
-      <a href="#personal">Personal</a>
-    </nav>
+  <!-- Header -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <h1 class="text-2xl font-bold">Your Name</h1>
+      <nav>
+        <ul class="flex space-x-6 text-gray-600">
+          <li><a href="#about" class="hover:text-blue-600">About</a></li>
+          <li><a href="#projects" class="hover:text-blue-600">Projects</a></li>
+          <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <section id="welcome">
-    <h2>Hello, I'm Harsh Bangera</h2>
-    <img src="MYPHOTO.png" alt="My Photo" width="200" style="border-radius: 10px;">
-
-    <video width="320" height="240" controls>
-      <source src="intro.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+  <!-- About Section -->
+  <section id="about" class="container mx-auto p-6 mt-10 bg-white rounded shadow-md max-w-3xl">
+    <h2 class="text-3xl font-semibold mb-4">About Me</h2>
+    <p class="text-gray-700 leading-relaxed">
+      Hi! I'm Your Name, a passionate web developer with experience in building modern, responsive websites using the latest technologies like Tailwind CSS, JavaScript, and APIs.
+    </p>
   </section>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p><strong>Name:</strong> Harsh Bangera</p>
-    <p><strong>Location:</strong> Virar, India</p>
-
-    <!-- Responsive Map Container -->
-    <div class="map-container">
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30094.70166532737!2d72.78435317800181!3d19.462562786667654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7aa23dce7efbf%3A0x99bd87871748d8f4!2sVirar%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1747732432963!5m2!1sen!2sin" 
-        allowfullscreen="" 
-        loading="lazy" 
-        referrerpolicy="no-referrer-when-downgrade"
-        title="Location Map">
-      </iframe>
+  <!-- Projects Section -->
+  <section id="projects" class="container mx-auto p-6 mt-10 max-w-5xl">
+    <h2 class="text-3xl font-semibold mb-6">Projects</h2>
+    <div id="projects-container" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- Projects will be loaded here dynamically -->
     </div>
-
-    <p><strong>Education:</strong> Currently pursuing a Bachelor of Engineering in Computer Engineering</p>
-    <p><strong>Languages Known:</strong> Hindi, Marathi, English</p>
   </section>
 
-  <section id="achievements">
-    <h2>Achievements</h2>
-    <ul>
-      <li>Built multiple personal and academic websites</li>
-      <li>Completed an industry certification course in SQL</li>
-      <li>Completed an industry certification course in .NET</li>
-    </ul>
+  <!-- Contact Section -->
+  <section id="contact" class="container mx-auto p-6 mt-10 bg-white rounded shadow-md max-w-3xl mb-20">
+    <h2 class="text-3xl font-semibold mb-4">Contact Me</h2>
+    <form class="flex flex-col space-y-4 max-w-md">
+      <input type="text" placeholder="Your Name" class="border border-gray-300 rounded px-3 py-2" />
+      <input type="email" placeholder="Your Email" class="border border-gray-300 rounded px-3 py-2" />
+      <textarea placeholder="Your Message" rows="4" class="border border-gray-300 rounded px-3 py-2"></textarea>
+      <button type="submit" class="bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition">
+        Send
+      </button>
+    </form>
   </section>
 
-  <section id="goals">
-    <h2>Future Goals</h2>
-    <p>My next academic goal is to pursue my Master’s degree in the United States. I aim to deepen my technical knowledge and contribute to the tech world meaningfully.</p>
-    <p>I would like to build websites that serve a purpose and create a real impact — websites that solve social problems or contribute to a cause.</p>
-  </section>
-
-  <section id="personal">
-    <h2>Personal Side</h2>
-    <p><strong>Hobbies:</strong> I enjoy gaming and watching cinema. Gaming helps me unwind and sharpens my reflexes, while cinema inspires my creativity and storytelling sense.</p>
-    <p><strong>Role Models:</strong> Cristiano Ronaldo — his relentless work ethic, confidence, and commitment to excellence inspire me to push myself further every day.</p>
-    <p><strong>Favorite Books, Websites, Startups:</strong> None currently.</p>
-    <p><strong>Volunteering Experience:</strong> None so far, but I’m open to contributing in the future.</p>
-  </section>
-
-  <footer>
-    <p>Made with ❤️ by Harsh Bangera</p>
+  <!-- Footer -->
+  <footer class="bg-white text-center p-4 text-gray-500">
+    &copy; 2025 Your Name. All rights reserved.
   </footer>
 
-  <script src="script.js"></script>
-</body>
-</html>
+  <script>
+    // Fetch projects from local JSON file and display them
+    fetch('projects.json')
+      .then(response => response.json())
+      .then(projects => {
+        const container = document.getElementById('projects-container');
+        projects.forEach(project => {
+          const projectEl = document.createElement('div');
+          projectEl.className = 'bg-white rounded shadow p-4 flex flex-col justify-between';
+
+          projectEl.innerHTML = `
+            <h3 class="text-xl font-semibold mb-2">${project.title}</h3>
+            <p class="text-gray-700 flex-grow">${project.description}</p>
+            <a href="${project.link}" target="_blank" class="mt-4 inline-block text-blue-600 hover:underline">
+              View Project
+            </a>
+          `;
+
+          container
