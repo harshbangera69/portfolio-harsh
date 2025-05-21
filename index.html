@@ -15,7 +15,6 @@
       <nav>
         <ul class="flex space-x-6 text-gray-700 font-medium">
           <li><a href="#about" class="hover:text-blue-600">About</a></li>
-          <li><a href="#projects" class="hover:text-blue-600">Projects</a></li>
           <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
         </ul>
       </nav>
@@ -33,14 +32,6 @@
       <source src="intro.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="container mx-auto p-6 mt-10 max-w-5xl">
-    <h2 class="text-3xl font-semibold mb-6 text-blue-700">Projects</h2>
-    <div id="projects-container" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      <!-- Projects loaded via JSON -->
-    </div>
   </section>
 
   <!-- Contact Section -->
@@ -77,31 +68,6 @@
   <footer class="bg-white text-center p-4 text-gray-500">
     &copy; 2025 Harsh Bangera. All rights reserved.
   </footer>
-
-  <!-- Project Loading Script -->
-  <script>
-    fetch('projects.json')
-      .then(response => response.json())
-      .then(projects => {
-        const container = document.getElementById('projects-container');
-        projects.forEach(project => {
-          const projectEl = document.createElement('div');
-          projectEl.className = 'bg-white rounded shadow p-4 flex flex-col justify-between';
-
-          projectEl.innerHTML = `
-            <h3 class="text-xl font-semibold mb-2 text-blue-600">${project.title}</h3>
-            <p class="text-gray-700 flex-grow">${project.description}</p>
-            <a href="${project.link}" target="_blank" class="mt-4 inline-block text-blue-600 hover:underline">
-              View Project
-            </a>
-          `;
-          container.appendChild(projectEl);
-        });
-      })
-      .catch(err => {
-        console.error('Failed to load projects:', err);
-      });
-  </script>
 
 </body>
 </html>
